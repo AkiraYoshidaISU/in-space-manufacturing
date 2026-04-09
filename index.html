@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Space Manufacturing: The Next Frontier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-main: #f0f4f8;
+            --text-muted: #8b9bb4;
+            --accent-glow: rgba(56, 189, 248, 0.5);
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.15), transparent 25%);
+            background-attachment: fixed;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(18px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.4s; }
+        section:nth-child(4) { animation-delay: 0.6s; }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        li.reference-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.4);
+            border-left: 3px solid #38bdf8;
+            border-radius: 0 12px 12px 0;
+            transition: background 0.2s;
+        }
+
+        li.reference-item:hover {
+            background: rgba(15, 23, 42, 0.7);
+        }
+
+        .ref-title {
+            font-weight: 600;
+            color: #f8fafc;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .ref-authors {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .ref-doi {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .ref-doi:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>In-Space Manufacturing</h1>
+        <div class="subtitle">Autonomous Research Brief on the Future of Off-Earth Industrial Production</div>
+    </header>
+
+    <section>
+        <h2>✦ Executive Summary</h2>
+        <p>As deep space science operations extend beyond Low Earth Orbit (LEO) towards the Moon and Mars, the reliance on Earth-bound supply chains becomes logistically prohibitive. <strong>In-Space Manufacturing (ISM)</strong> is emerging as a critical capability, allowing missions to manufacture parts, structures, and even habitats directly in the space environment. This paradigm shift transitions space flight from a "carry everything" approach to a sustainable "make what you need" model.</p>
+        <p>AI-driven autonomous research pipelines continually scan for breakthroughs in Additive Manufacturing (AM) and robotics, accelerating our readiness for deep space colonization. The integration of zero-gravity processing constraints and novel materials dictates the future of these technologies.</p>
+    </section>
+
+    <section>
+        <h2>✦ Key Technologies & Developments</h2>
+        <p>Recent advancements highlight several core pillars of ISM:</p>
+        <p><strong>Additive Manufacturing in Microgravity:</strong> 3D printing technologies (fused deposition modeling, metal printing) have been successfully tested aboard the ISS. These processes must account for altered fluid dynamics and heat dissipation in reduced gravity.</p>
+        <p><strong>Lunar Factories & In-Situ Resource Utilization (ISRU):</strong> Designing production facilities on the lunar surface relies heavily on utilizing local regolith. Conceptual frameworks now model the end-to-end processing required to transform raw lunar dust into viable structural materials.</p>
+        <p><strong>Recycling & Circular Space Economy:</strong> Producing filament from discarded plastic packaging and end-of-life components is vital to sustaining long-duration missions with strict mass constraints.</p>
+    </section>
+
+    <section>
+        <h2>✦ Curated References (DOIs)</h2>
+        <p>The following peer-reviewed publications form the foundational background for current ISM capabilities and strategic planning.</p>
+        <ul>
+
+            <li class="reference-item">
+                <span class="ref-title">Special Issue: In-Space Manufacturing</span>
+                <span class="ref-authors">Malshe, A. P., et al. (2024)</span>
+                <a href="https://doi.org/10.1115/1.4067390" class="ref-doi" target="_blank">DOI: 10.1115/1.4067390</a>
+            </li>
+
+            <li class="reference-item">
+                <span class="ref-title">In-Space Additive Manufacturing: A Review</span>
+                <span class="ref-authors">Orme, M. E., et al. (2022)</span>
+                <a href="https://doi.org/10.1115/1.4055278" class="ref-doi" target="_blank">DOI: 10.1115/1.4055278</a>
+            </li>
+
+            <li class="reference-item">
+                <span class="ref-title">Exploring space manufacturing: designing a lunar factory for space-bound products in the new space economy</span>
+                <span class="ref-authors">De Francesco, E., et al. (2024)</span>
+                <a href="https://doi.org/10.1017/pds.2024.26" class="ref-doi" target="_blank">DOI: 10.1017/pds.2024.26</a>
+            </li>
+
+            <li class="reference-item">
+                <span class="ref-title">Manufacturing Beyond Earth: A Comprehensive Review of In-Space Additive Manufacturing</span>
+                <span class="ref-authors">Thai, D. (2024)</span>
+                <a href="https://doi.org/10.36838/v6i5.7" class="ref-doi" target="_blank">DOI: 10.36838/v6i5.7</a>
+            </li>
+
+            <li class="reference-item">
+                <span class="ref-title">The Future of In-Space Manufacturing: A Systematic Review of Emerging Technologies, Trends, and Applications for Sustainable Space Exploration and Off-Earth Colonization</span>
+                <span class="ref-authors">Narayanan, M., et al. (2024)</span>
+                <a href="https://doi.org/10.52202/078374-0040" class="ref-doi" target="_blank">DOI: 10.52202/078374-0040</a>
+            </li>
+
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
